@@ -132,4 +132,8 @@ small{
         padding: 0 1.5rem .7rem .7rem;
     }
 
+    .sub p, .subp{
+        font-size: 1.3rem;
+    }
+
 }
