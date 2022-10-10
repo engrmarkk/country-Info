@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<section>
+
+
+    <form action="" method="post">
+        <h1>Country's Info</h1>
+        <p>{{ form.country_name(placeholder='Enter country name', autocomplete="off", required=False, class='field') }}</p>
+            {% if error %}
+                <small>{{ error }}</small>
+            {% endif %}
+        <p>{{ form.submit(class='submit_btn') }}</p>
+    </form>
+
+    {% if country_ %}
+    <div class="pad">
+        <div class="result">
+            <h1 class="name_">{{ country_ }}</h1>
+            <div class="everything">
+                <p class="label"> Alternative Spelling</p>
+                <div class="sub">
+                    {% for x in country.alt_spellings() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="everything">
+                <p class="label">Continent</p>
+                <p class="subp">{{ country.region() }}</p>
+            </div>
+
+            <div class="everything">
+                <p class="label">Region</p>
+                <p class="subp">{{ country.subregion() }}</p>
+            </div>
+
+            {% if country.capital() %}
+            <div class="everything">
+                <p class="label">Capital</p>
+                <p class="subp">{{ country.capital() }}</p>
+            </div>
+            {% endif %}
+
+            <div class="everything">
+                <p class="label">Nationality</p>
+                <p class="subp">{{ country.demonym() }}</p>
+            </div>
+
+            <div class="everything">
+                <p class="label">Currency(ies)</p>
+                <div class="sub">
+                    {% for x in country.currencies() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="everything">
+                <p class="label">Language(s)</p>
+                <div class="sub">
+                    {% for x in country.languages() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="everything">
+                <p class="label">Borders</p>
+                <div class="sub">
+                    {% for x in country.borders() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="everything">
+                <p class="label">Calling code(s)</p>
+                <div class="sub">
+                    {% for x in country.calling_codes() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        
+            <div class="everything">
+                <p class="label">Capital Lat and Long</p>
+                <div class="sub">
+                    {% for x in country.capital_latlng() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="everything">
+                <p class="label">Provinces</p>
+                <div class="sub">
+                    {% for x in country.provinces() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="everything">
+                <p class="label">Population</p>
+                <p class="subp">{{ country.population() }}</p>
+            </div>
+
+            <div class="everything">
+                <p class="label">Timezone(s)</p>
+                <div class="sub">
+                    {% for x in country.timezones() %}
+                        <p>{{ x }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+</body>
+</html>
