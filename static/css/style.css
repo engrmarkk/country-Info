@@ -119,7 +119,7 @@ small{
 @media (min-width:0px) and (max-width:768px)
   and (orientation:portrait){
     .field{
-        width: 20rem;
+        width: 25rem;
     }
 
     .submit_btn{
@@ -127,10 +127,18 @@ small{
     }
 
     .label, .field, .submit_btn{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .result{
         padding: 0 .7rem .7rem .7rem;
+    }
+
+    .sub{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        /* margin-left: 1rem; */
     }
 }
