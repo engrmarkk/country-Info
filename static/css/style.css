@@ -73,7 +73,7 @@ h1{
 .sub p{
     background: rgb(233, 228, 71);
     padding: .4rem .6rem;
-    margin: .6rem;
+    margin: .6rem 0;
     width: 100%;
     color: #204152;
     font-weight: 500;
@@ -83,7 +83,7 @@ h1{
 .subp{
     background: rgb(233, 228, 71);
     padding: .4rem .6rem;
-    margin: .6rem;
+    margin: .6rem 0;
     width: 100%;
     color: #204152;
     font-weight: 500;
@@ -91,7 +91,6 @@ h1{
 }
 
 .label{
-    margin-left: .6rem;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -140,7 +139,7 @@ small{
     }
 
     .result{
-        padding: 0 1.5rem .7rem .7rem;
+        padding: 0 2rem 1rem 2rem;
     }
 
     .sub p{
