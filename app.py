@@ -16,6 +16,8 @@ def index():
     try:
         if request.method == 'POST':
             country_ = form.country_name.data
+            if country_[len(country_) - 1] == ' ':
+                country_ = country_[:-1]
             country_ = country_.title()
             country = CountryInfo(country_)
             return render_template('index.html', country_=country_, form=form, country=country)

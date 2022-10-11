@@ -11,7 +11,7 @@
 
 form{
     margin: auto;
-    width: fit-content;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ form{
 }
 
 .field{
-    width: 35rem;
+    width: 100%;
     font-size: 1.2rem;
     padding: 1rem .8rem;
     border-radius: .6rem;
@@ -70,19 +70,30 @@ h1{
     flex-direction: column;
 }
 
-.sub p, .subp{
+.sub p{
     background: rgb(233, 228, 71);
     padding: .4rem .6rem;
     margin: .6rem;
     width: 100%;
     color: #204152;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.subp{
+    background: rgb(233, 228, 71);
+    padding: .4rem .6rem;
+    margin: .6rem;
+    width: 100%;
+    color: #204152;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .label{
     margin-left: .6rem;
     font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .result{
@@ -117,7 +128,7 @@ small{
 
 @media screen and (max-width:768px){
     .field{
-        width: 25rem;
+        width: 100%;
     }
 
     .submit_btn{
@@ -125,15 +136,23 @@ small{
     }
 
     .label, .field, .submit_btn{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .result{
         padding: 0 1.5rem .7rem .7rem;
     }
 
-    .sub p, .subp{
-        font-size: 1.3rem;
+    .sub p{
+        font-size: 1.1rem;
+    }
+
+    .subp{
+        font-size: 1.1rem;
+    }
+
+    form{
+        width: 70%;
     }
 
 }
